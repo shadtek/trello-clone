@@ -11,5 +11,10 @@ angular.module('Trello')
 		text: 'Do laundry.'
 	}
 
+	$http.post('/api/task', newTask)
+	.then(function (response) {
+		console.log(response.data)
+	})
+
 
 });
