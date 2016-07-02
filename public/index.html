@@ -18,7 +18,7 @@
             {{task}}
           </div>
           <input type="text" placeholder="Add a new task..." class="form-control" ng-model="newTask" />
-          <button type="button" class="btn btn-default" ng-click="addTask()">Submit</button>
+          <button type="button" class="btn btn-default" ng-click="addTask($index, newTask)">Submit</button>
         </div>
       </div>
     </section>

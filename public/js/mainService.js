@@ -7,6 +7,10 @@ angular.module('Trello')
 		return $http.get('/api/data')
 	}
 
+	service.addTask = function (listIndex, newTask) {
+		return $http.put('/api/task/' + listIndex, {text: newTask});
+	}
+
 	return service
 
 });

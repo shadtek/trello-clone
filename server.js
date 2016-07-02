@@ -7,9 +7,9 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/hello-world', function (req, res) {
-	res.send('Hello World!');
-});
+// app.get('/hello-world', function (req, res) {
+// 	res.send('Hello World!');
+// });
 
 app.get('/api/data', function(req, res) {
 
@@ -24,12 +24,12 @@ var lists = [{
   name: 'work', tasks: ['get rich', 'get that promotion', 'slap the CEO in the face']
 }];
 
-app.post('/api/task', function(req, res) {
-	req.body;
-	console.log(req.body)
-
-	res.send(req.body)
+app.put('/api/task/:listIndex', function(req, res) {
+	var listIndex = req.params.listIndex;
+	lists[listIndex].tasks.push(req.body.text);
+	res.send(req.body.text)
 })
+
 
 var portNum = 3000
 app.listen(portNum, function () {

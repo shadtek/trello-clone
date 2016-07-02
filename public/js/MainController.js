@@ -11,10 +11,16 @@ angular.module('Trello')
 		console.log(err);
 	})
 
-	// $scope.newTask = function () {
-		
-
-	// };
+	$scope.addTask = function (listIndex, newTask) {
+		mainService.addTask(listIndex, newTask)
+		.then(function (response) {
+			console.log(response)
+			$scope.lists[listIndex].tasks.push(response.data);
+		})
+		.catch(function(err){
+			console.error(err);
+		})
+	};
 
 
 });
