@@ -4,7 +4,7 @@ angular.module('Trello')
 	
 	mainService.getAllData()
 	.then(function (response) {
-		$scope.data = response.data;
+		$scope.lists = response.data;
 		console.log(response.data)
 	})
 	.catch(function(err){

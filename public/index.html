@@ -12,9 +12,9 @@
 
     <section class="container">
       <div class="row">
-        <div class="list" ng-repeat="list in data">
+        <div class="list" ng-repeat="list in lists">
           <h3>{{list.name}}</h3>
-          <div class="card" ng-repeat="task in list.posts">
+          <div class="card" ng-repeat="task in list.tasks">
             {{task}}
           </div>
           <input type="text" placeholder="Add a new task..." class="form-control" ng-model="newTask" />

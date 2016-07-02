@@ -17,11 +17,11 @@ app.get('/api/data', function(req, res) {
 })
 
 var lists = [{
-  name: 'personal', posts: ['sleep', 'eat']
+  name: 'personal', tasks: ['sleep', 'eat']
 }, {
-  name: 'school', posts: ['homework', 'study for the test']
+  name: 'school', tasks: ['homework', 'study for the test']
 }, {
-  name: 'work', posts: ['get rich', 'get that promotion', 'slap the CEO in the face']
+  name: 'work', tasks: ['get rich', 'get that promotion', 'slap the CEO in the face']
 }];
 
 app.post('/api/task', function(req, res) {
